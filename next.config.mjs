@@ -10,4 +10,11 @@ module.exports = (phase) => {
             }
         }
     }
+    return{
+        env: {
+            mongodb_username: 'rabino',
+            mongodb_password: 'MongoloDB123',
+            mongodb_clustername: 'comments'
+        }
+    }
 }

@@ -29,19 +29,6 @@ function ContactForm(){
         const enteredEmail = emailInputRef.current.value;
         const enteredComment = commentInputRef.current.value;
 
-        // if (
-        //     !enteredEmail ||
-        //     enteredEmail.trim() === '' ||
-        //     !enteredEmail.includes('@') ||
-        //     !enteredName ||
-        //     enteredName.trim() === '' ||
-        //     !enteredComment ||
-        //     enteredComment.trim() === ''
-        // ) {
-        //     setInvalid(true);
-        //     return;
-        // }
-
         fetch('/api/new-contact-api', {
             method: 'POST',
             body: JSON.stringify({
@@ -57,7 +44,6 @@ function ContactForm(){
         .then((response)=>{
             setRequestStatus(response.status);
             if(response.status === 'error'){
-                console.log(response);
                 setErrorMessage(response.message);
             } else if(response.status==='success'){
                 nameInputRef.current.value='';
