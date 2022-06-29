@@ -57,6 +57,7 @@ function ContactForm(){
         .then((response)=>{
             setRequestStatus(response.status);
             if(response.status === 'error'){
+                console.log(response);
                 setErrorMessage(response.message);
             } else if(response.status==='success'){
                 nameInputRef.current.value='';
