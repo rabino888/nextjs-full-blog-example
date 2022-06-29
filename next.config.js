@@ -8,14 +8,13 @@ module.exports = (phase) => {
                 mongodb_password: 'MongoloDB123',
                 mongodb_clustername: 'comments'
             }
-        }
-    } else {
-        return {
-            env: {
-                mongodb_username: 'rabino',
-                mongodb_password: 'MongoloDB123',
-                mongodb_clustername: 'comments'
-            }
-        }
+        };
     }
+    return {
+        env: {
+            mongodb_username: 'rabino',
+            mongodb_password: 'MongoloDB123',
+            mongodb_clustername: 'comments'
+        }
+    };    
 }

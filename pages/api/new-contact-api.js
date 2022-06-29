@@ -15,10 +15,7 @@ async function handler (req, res) {
         } catch(error){
             res.status(500).json({
                 message: 'failed to connect to database',
-                status: 'error',
-                username: process.env.mongodb_username,
-                password: process.env.mongodb_password,
-                clustername: process.env.mongodb_clustername
+                status: 'error'
             });
             return;
         }     
